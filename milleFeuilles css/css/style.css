@@ -1,0 +1,51 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.slider-container{
+  height: 60vh;
+  width: 60vw;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: none;
+}
+.slider-container img{
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+}
+.hidden{
+  display: none;
+}
+.no-visibility {
+  visibility: hidden;
+}
+.show {
+  animation-name: show;
+  animation-duration: 1s;
+  opacity: 1;
+}
+.hide {
+  animation-name: hide;
+  animation-duration: 1s;
+  opacity: 0;
+}
+.slowShow {
+  animation-name: show;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+@keyframes show {
+  from {opacity: 0;}
+  to {opacity: 1;display: inherit;}
+}
+@keyframes hide {
+  from {opacity: 1;}
+  to {opacity: 0;display:none;}
+}
